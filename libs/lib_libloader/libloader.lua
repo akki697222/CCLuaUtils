@@ -1,8 +1,8 @@
-local errors = require("logerror")
+local errors = require("/libs/lib_logfs/logerror")
 local libs = {
-    libfilesys_dir = "/libs/libfilesys/dir",
-    libfilesys_file = "/libs/libfilesys/file",
-    liblogfs_log = "/libs/liblogfs/log",
+    libfilesys_dir = "/libs/lib_filesys/dir",
+    libfilesys_file = "/libs/lib_filesys/file",
+    liblogfs_log = "/libs/lib_logfs/log",
     basalt = "/libs/libbasalt/main"
 }
 local lib = {}
@@ -12,7 +12,7 @@ function lib.require(libn)
     if loadlib ~= nil then
         return loadlib
     elseif loadlib == nil then
-        errors.error("LibLoader.LOADLIB_NULL")
+        errors.error("LibLoader.EXPECTION_NULL")
     else
         errors.error("LibLoader.UNEXPECTED_ERROR")
     end
