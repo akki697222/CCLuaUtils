@@ -8,7 +8,7 @@ local libs = {
 }
 local lib = {}
 
-function lib.require(libn)
+function lib.getLibPath(libn)
     local loadlib = libs[libn]
     if loadlib ~= nil then
         return loadlib
